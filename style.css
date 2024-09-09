@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}
+
+:root{
+    font-size: 62.5%; 
+    --color-pink: #B52184;
+    --color-blue: #312D64;
+    --color-back-primary: #F9F4FB;
+    --color-back-second: linear-gradient(90deg, #343193, #302C63);
+}
+
+body{
+    font-size: 1.6rem;
+    background: var(--color-back-primary);
+}
+
+h1, h2, p, input, label, textarea{
+    font-family: "Mulish", sans-serif;    
+}
+
+h1, h2{
+    color: var(--color-pink);
+}
+
+.app{
+    min-width: 43.0rem;
+}
+
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  */
+
+h1{
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+
+header{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center;     */
+    flex-direction: column;
+    padding: 0 3.4rem;
+}
+
+.header-container-img img{
+    width: 100%;      
+    animation: fromTop 600ms 420ms backwards; 
+}
+
+.header-container-titile{
+    display: flex;
+    flex-direction: column;        
+    align-items: center;    
+}
+
+header h1{
+    margin-top: 1.7rem;
+}
+
+header p{
+    margin-top: 0.5rem;
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+#arrowDown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    width: 5.8rem;
+    height: 10.5rem;    
+    border: 0.4rem solid var(--color-pink);
+    border-radius: 45px;    
+}
+
+#arrowDown img{
+    width: 2.9rem;
+    height: 4.5rem;   
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; 
+}
+
+main{
+    margin-top: 5rem;
+}
+
+main section:first-of-type{
+    background: var(--color-back-second);   
+}
+
+.cards{    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem;
+    padding-bottom: 5rem;    
+}
+
+.card{
+    width: 35.2rem;
+    padding: 2.6rem;
+    background: #ffffff;    
+    border-radius: 2.0rem;
+}
+
+.card div:first-of-type{
+    width: 26.0rem;
+}
+
+.card img{
+    width: 8.0rem;        
+    height: 8.0rem;
+}
+
+.card:hover{
+    background: var(--color-back-primary);   
+}
+
+.card h2{
+    margin-top: 2.2rem;
+    font-weight: 900;
+    font-size: 3.0rem;
+}
+
+.card p{
+    margin-top: 0.8rem;   
+    font-weight: 600;  
+}
+
+.contact-sec{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    
+}
+
+.contact h2{
+    font-weight: 900;
+    font-size: 3.2rem;
+    /* margin-top: 7.8rem; */
+}
+
+#img-star{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.contact{
+    margin: 6.5rem 4.0rem;
+}
+
+.contact form{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    align-items: flex-start;    
+    gap: 2.4rem;
+    min-width: 35.0rem;
+    margin-top: 4.3rem;
+}
+
+.input-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-data input{    
+    height: 4.8rem;
+    padding: 1.6rem 1.6rem 1.6rem 5.0rem  ;
+}
+
+.input-data textarea{
+    height: 12.6rem;
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.input-data input, textarea{
+    border-radius: 1.6rem;
+    border: 0.2rem solid var(--color-blue);
+    background-color: var(--color-back-primary);
+    font-size: 1.6rem;
+}
+
+.input-data input:focus{
+    background-color: #fcfcfc;
+}
+
+.input-data textarea:focus{
+    background-color: #fcfcfc;
+}
+
+.contact form button{
+    border: none;
+    color: #ffffff;
+    background-color: var(--color-blue);
+    font-weight: bold;
+    width: 15.1rem;
+    height: 4.5rem;
+    border-radius: 1.6rem;
+    margin-bottom: 6.5rem;
+}
+
+.contact form button:hover{
+    background-color: #150f63;
+}
+
+.input-data label{
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+ 
+.icon-input{
+    position: absolute;
+    margin-top: 1.2rem;
+    margin-left: 1.4rem;
+    width: 2.4rem;
+    height: 2.4rem;   
+}
+
+footer{
+    background: var(--color-blue);
+}
+
+footer p{
+    color: #ffffff;
+    font-size: 2.0rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 3.2rem 1.6rem;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(-2.0rem);
+    }
+    100%{
+        transform: translateY(2.0rem);
+    }   
+}
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(100%);
+    }
+}
+
+@media (min-width:769px) {
+    /* .app{
+        min-width: 144.0rem;
+    } */
+
+    
+    header{        
+        flex-direction: row-reverse;
+        max-height: 83.6rem;
+        max-width: 130.1rem;
+    }
+    
+    .header-container-titile{      
+        align-items: normal;
+        width: 58.2rem;       
+    }
+
+    .header-container-img img{
+        width: 100%;
+    }
+    
+    header h1{
+        margin-top: 31.2rem; 
+        font-size: 5.6rem;        
+        font-weight: 800;        
+    }
+    
+    header p{
+        margin-top: 0.5rem;
+        font-size: 2.8rem;
+        font-weight: 600;
+    }    
+       
+    #arrowDown{
+        margin-top: 17.9rem;
+    }
+
+    .cards{
+        flex-direction: row;
+    }
+
+    .contact-sec{
+        flex-direction: row;  
+        justify-content: space-between;   
+        max-height: 61.2rem;        
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 59.5rem;
+        margin: auto;
+    }
+
+    .contact form{
+        width: 100%;        
+    }
+
+    #img-star{
+        /* max-width: 64.4rem; */
+        width: 50%;
+        height: 61.2rem;
+        visibility: visible;
+    }
+
+}
